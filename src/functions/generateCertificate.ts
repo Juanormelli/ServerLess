@@ -41,7 +41,7 @@ export const handle = async (event)=>{
             ":id":id
         }
     }).promise()
-    
+
     const userAlreadyExists = response.Items[0]
     if (!userAlreadyExists){
         await document.put({
@@ -70,7 +70,7 @@ export const handle = async (event)=>{
 
     const browser = await chromium.puppeteer.launch({
         headless:true,
-        
+        args:chromium.args,
         
         defaultViewport: chromium.defaultViewport,
         executablePath: await chromium.executablePath

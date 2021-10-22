@@ -28,7 +28,7 @@ export const handle:APIGatewayProxyHandler= async (event) => {
         }
     }
     return {
-        statusCode: 200,
+        statusCode: 400,
         body: JSON.stringify({
             message:"Certificado Invalido",
             
